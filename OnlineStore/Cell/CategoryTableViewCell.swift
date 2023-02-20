@@ -23,8 +23,8 @@ class CategoryTableViewCell: UITableViewCell {
 
     }
     
-    func configureCell(category: Category) {
-        cellImageView.image = UIImage(named: category.category.lowercased())
-        cellLabel.text = category.category
+    func configureCell(category: String) {
+        cellImageView.image = UIImage(named: category.lowercased())
+        cellLabel.text = category
     }
 }

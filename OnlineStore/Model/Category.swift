@@ -9,9 +9,13 @@ import Foundation
 
 struct Category {
     
-    private(set) public var category: String
-        
-    init(category: String) {
-        self.category = category
+    private var title: String
+    
+    init(title: String) {
+        self.title = title
+    }
+    
+    var getTitle: String {
+        return title
     }
 }

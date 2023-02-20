@@ -13,14 +13,14 @@ class CategoryViewModel {
     static let instance = CategoryViewModel()
     
     private let categories: [Category] = [
-        Category(category: "DIGITAL"),
-        Category(category: "HATS"),
-        Category(category: "HOODIES"),
-        Category(category: "SHIRTS")
+        Category(title: "DIGITAL"),
+        Category(title: "HATS"),
+        Category(title: "HOODIES"),
+        Category(title: "SHIRTS")
     ]
     
-    func getCategory(index: IndexPath) -> Category {
-        return categories[index.row]
+    func getCategory(index: IndexPath) -> String {
+        return categories[index.row].getTitle
     }
     
     var numberOfRowsInSection: Int {
