@@ -11,8 +11,6 @@ class CategoriesVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private let categoryModel = Categories()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -29,12 +27,12 @@ class CategoriesVC: UIViewController {
 
 extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryModel.getCategories().count
+        return CategoryViewModel.instance.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
-            cell.configureCell(category: categoryModel.getCategories()[indexPath.row])
+            cell.configureCell(category: CategoryViewModel.instance.getCategory(index: indexPath))
             return cell
         }
         return UITableViewCell()
