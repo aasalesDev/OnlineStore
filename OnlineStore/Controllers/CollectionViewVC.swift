@@ -8,7 +8,7 @@
 import UIKit
 
 class CollectionViewVC: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,10 +28,10 @@ class CollectionViewVC: UIViewController {
             layout.estimatedItemSize = .zero
         }
     }
-
 }
 
 extension CollectionViewVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return CategoryViewModel.instance.getImages().count
     }
