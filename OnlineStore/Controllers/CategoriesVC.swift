@@ -43,7 +43,7 @@ extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: String(describing: CollectionView.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: CollectionView.self)) as? CollectionView {
+        if let vc = UIStoryboard(name: String(describing: CollectionViewVC.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: CollectionViewVC.self)) as? CollectionViewVC {
             navigationController?.pushViewController(vc, animated: true)
         }
     }

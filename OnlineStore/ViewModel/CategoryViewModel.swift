@@ -19,6 +19,12 @@ class CategoryViewModel {
         Category(title: "SHIRTS")
     ]
     
+    private let images = ["hat01", "hat02", "hat03", "hat04", "hoodie01", "hoodie02", "hoodie03", "hoodie04", "shirt01", "shirt02", "shirt03", "shirt04","shirt05"]
+    
+    func getImages() -> [String] {
+        return images
+    }
+    
     func getCategory(index: IndexPath) -> String {
         return categories[index.row].getTitle
     }
