@@ -42,5 +42,11 @@ extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
         return 250
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = UIStoryboard(name: String(describing: CollectionView.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: CollectionView.self)) as? CollectionView {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
