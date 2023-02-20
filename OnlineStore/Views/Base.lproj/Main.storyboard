@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ONLINE SHOPPER-->
+        <!--ONLINE STORE-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CategoriesVC" customModule="OnlineStore" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                             <constraint firstItem="gZD-nN-FY0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ero-Fd-TcT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ONLINE SHOPPER" id="REU-kR-HEY"/>
+                    <navigationItem key="navigationItem" title="ONLINE STORE" id="REU-kR-HEY"/>
                     <connections>
                         <outlet property="tableView" destination="XtI-Rr-fI3" id="Ps3-J0-nA3"/>
                     </connections>
